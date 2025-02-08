@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EMS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #2a2a72;
+            color: #ffffff;
+            height: 100vh;
+            padding: 20px 10px;
+            position: fixed;
+            width: 220px;
+            transition: width 0.3s;
+        }
+
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #4242aa;
+        }
+
+        /* Navbar */
+        .navbar {
+            margin-left: 220px;
+            transition: margin-left 0.3s;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #ffffff;
+            border-bottom: 2px solid #4242aa;
+        }
+
+        .navbar .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .navbar .navbar-brand:hover {
+            color: #f4f4f4;
+        }
+
+        .navbar .btn {
+            color: #ffffff;
+            border: none;
+            background: rgba(255, 0, 0, 0.2);
+        }
+
+        .navbar .btn:hover {
+            background: rgba(255, 0, 0, 0.4);
+        }
+
+        /* Content */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 15px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card i {
+            font-size: 2rem;
+        }
+
+        .card-title {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card:nth-child(1) {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .card:nth-child(2) {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+        }
+
+        .card:nth-child(3) {
+            background: linear-gradient(135deg, #42e695, #3bb2b8);
+        }
+
+        .card:nth-child(4) {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+
+        .card:nth-child(5) {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+        }
+
+        .card:nth-child(6) {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        }
+
+        .card:nth-child(7) {
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        .card:nth-child(8) {
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h4 class="text-center">Admin Panel</h4>
+      <a href="index.html" class="active"><i class="bi bi-grid"></i> <span>Dashboard</span></a>
+      <a href="venues.html"><i class="bi bi-geo-alt"></i> <span>Venues</span></a>
+      <a href="event-list.html"><i class="bi bi-calendar-event"></i> <span>Event List</span></a>
+      <a href="event-audience.html" ><i class="bi bi-people-fill"></i> <span>Event Audience</span></a>
+      <a href="audience-report.html"><i class="bi bi-file-earmark-text"></i> <span>Audience Report</span></a>
+      <a href="events-report.html" ><i class="bi bi-file-earmark-bar-graph"></i> <span>Events Report</span></a>
+      <a href="feedback.html"><i class="bi bi-chat-left-dots"></i> <span>Feedback</span></a>
+      <a href="users.html"><i class="bi bi-people"></i> <span>Users</span></a>
+   
+  </div>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow bg-primary text-white">
+  <div class="container-fluid">
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-4 text-white fw-bold" href="#">Event Management System </a>
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Search Bar -->
+          <form class="d-flex ms-auto me-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-light text-primary" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+
+          <!-- Profile Section -->
+          <div class="navbar-profile d-flex align-items-center">
+              <img src="OIP.jpeg" alt="Profile Image" class="rounded-circle me-2" width="40" height="40">
+              <span class="me-3 fw-bold">Admin</span>
+              <!-- Logout -->
+              <a href="" class="btn btn-danger btn-sm fw-bold">Log Out</a>
+          </div>
+      </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <a href="users.html" class="text-decoration-none">
+                  <div class="card text-center p-4">
+                    <i class="bi bi-people icon"></i>
+                    <h5>Users</h5>
+                    <div class="animated-counter">4</div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="event-list.html" class="text-decoration-none">
+                  <div class="card text-center p-4">
+                    <i class="bi bi-calendar-event icon"></i>
+                    <h5>Events</h5>
+                    <div class="animated-counter">85</div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="event-audience.html" class="text-decoration-none">
+                  <div class="card text-center p-4">
+                    <i class="bi bi-person-lines-fill icon"></i>
+                    <h5>Audience</h5>
+                    <div class="animated-counter">5,420</div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+              <a href="venues.html" class="text-decoration-none">
+                <div class="card text-center p-4">
+                  <i class="bi bi-geo-alt icon"></i>
+                  <h5>Venues</h5>
+                  <div class="animated-counter">8</div>
+              </div>
+              </a>
+          </div>
+            <div class="col-md-3">
+                <a href="feedback.html" class="text-decoration-none">
+                  <div class="card text-center p-4">
+                    <i class="bi bi-chat-left-dots icon"></i>
+                    <h5>Feedback</h5>
+                    <div class="animated-counter">1,230</div>
+                </div>
+                </a>
+            </div>
+            
+           
+           
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
