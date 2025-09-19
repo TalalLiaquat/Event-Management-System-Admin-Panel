@@ -70,13 +70,13 @@ Event-Management-System-Admin-Panel/
 
 📱 Improve mobile-friendly design
 
-✨ Author
-👤 Talal Liaquat
-📌 Student of Computer Science | Exploring Web Development & Event Management Systems
+## ✨ Author
 
-💼 LinkedIn: linkedin.com/in/talalliaquat
+Developed with ❤️ by [M. Talal Liaquat](https://github.com/TalalLiaquat)
+> **LinkedIn**: (https://www.linkedin.com/in/talal-liaquat/)
 
+---
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the MIT License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
